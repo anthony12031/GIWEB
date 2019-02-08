@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "types": ["reflect-metadata"],
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "lib": ["es6"],
+    "outDir": "build",
+  },
+  "include": [
+    "src/**/*"
+  ]
+}

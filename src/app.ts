@@ -10,14 +10,13 @@ let forgeRSA = new ForgeRSA();
 app.use(bodyParser.json())
 
 app.get('/', function (req, res) {
-  res.send('Hello World!');
+  res.send('Proyecto GIWEB Back END');
 });
 
 //Crear par de llaves RSA y retorna un hash junto con la lalve publica en formato PEM
 app.get('/publicKey',function(req,res){
     res.send(forgeRSA.crearRSAKey());
 });
-
 
 //Recibe mensajeEncriptado y hash en el body de la peticion
 //retorna mensaje desencriptado si el hash existe

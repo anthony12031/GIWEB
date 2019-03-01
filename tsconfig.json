@@ -7,6 +7,13 @@
     "emitDecoratorMetadata": true,
     "lib": ["es6"],
     "outDir": "build",
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+          "node_modules/*",
+          "src/types/*"
+      ]
+    }
   },
   "include": [
     "src/**/*"

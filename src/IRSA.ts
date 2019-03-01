@@ -1,5 +1,9 @@
-import {RSAKey} from "./RSAKey";
+
+export interface RSAResponse{
+    hash:string,
+    llave_publica:any
+}
 export interface IRSA{
-    desencriptarMensaje(msg:string):string;
-    crearRSAKey():RSAKey;
+    desencriptarMensaje(msg:string,hash:string):string;
+    crearRSAKey():RSAResponse;
 }

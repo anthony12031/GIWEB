@@ -17,10 +17,14 @@
   },
   "homepage": "https://github.com/anthony12031/GIWEB#readme",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.16.4",
-    "node-forge": "^0.8.1"
+    "node-forge": "^0.8.1",
+    "uuid": "^3.3.2"
   },
   "devDependencies": {
-    "@types/express": "^4.16.1"
+    "@types/body-parser": "^1.17.0",
+    "@types/express": "^4.16.1",
+    "@types/uuid": "^3.4.4"
   }
 }

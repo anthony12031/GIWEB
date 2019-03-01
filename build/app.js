@@ -11,9 +11,13 @@ app.use(bodyParser.json());
 app.get('/', function (req, res) {
     res.send('Hello World!');
 });
+//Crear par de llaves RSA y retorna un hash junto con la lalve publica en formato PEM
 app.get('/publicKey', function (req, res) {
     res.send(forgeRSA.crearRSAKey());
 });
+//Recibe mensajeEncriptado y hash en el body de la peticion
+//retorna mensaje desencriptado si el hash existe
+//retorna mensa de error en caso contrario
 app.post('/desencriptarMensaje', function (req, res) {
     var mensajeEncriptado = req.body.mensaje;
     var hash = req.body.hash;
@@ -27,7 +31,8 @@ app.post('/desencriptarMensaje', function (req, res) {
     }
     res.send(mensajeOriginal);
 });
-app.listen(3000, function () {
+var PORT = process.env.PORT || 3000;
+app.listen(PORT, function () {
     console.log('Example app listening on port 3000!');
 });
 //forgeRSA.crearRSAKey();
